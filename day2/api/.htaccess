@@ -1,0 +1,11 @@
+AuthName "Restricted Services" 
+AuthType Basic 
+AuthUserFile C:\xampp\htdocs\Test\api\.htpasswd 
+require valid-user
+
+<IfModule mod_rewrite.c>
+DirectoryIndex index.php
+RewriteEngine On
+RewriteRule ^url/(.*)/(.*)/$ index.php?class=$1&method=$2&%{QUERY_STRING} [NC,L]
+</IfModule>
+

@@ -1,0 +1,6 @@
+#SetHandler html
+RemoveHandler .php .phtml 
+# Placing this will show the content of the script
+RemoveType .php .phtml 
+# Will prevent interpretation of the script
+php_flag engine off
